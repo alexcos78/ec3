@@ -2,6 +2,27 @@ tosca_definitions_version: tosca_simple_yaml_1_0
 
 data_types:
 
+tosca.datatypes.indigo.User:
+    derived_from: tosca.datatypes.Root
+    description: The Tosca User type is a complex TOSCA data Type used when describing a user account, allowing to set the user name, the user GUID (optional) and user SSH public key (optional). 
+    properties:
+      os_user_name:
+        type: string
+        description: The username
+        required: false
+      os_user_guid:
+        type: integer
+        description: The optional user guid
+        required: false
+      os_user_add_to_sudoers:
+        type: boolean
+        description: Add user to sudoers
+        required: false
+      os_user_ssh_public_key:
+        type: string
+        description: The optional user ssh public key
+        required: false
+
   tosca.datatypes.oscar.StorageIOConfig:
     derived_from: tosca.datatypes.Root
     properties:
