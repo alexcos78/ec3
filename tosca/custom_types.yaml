@@ -361,6 +361,17 @@ node_types:
       host:
         type: tosca.capabilities.indigo.Container
         valid_source_types: [tosca.nodes.SoftwareComponent]
+    artifacts:
+      os_users_role:
+        file: indigo-dc.os_users
+        type: tosca.artifacts.AnsibleGalaxy.role
+    interfaces:
+      Standard:
+        configure:
+          implementation: https://baltig.infn.it/IoTwins/tosca-types/raw/master/artifacts/os/configure_users.yml
+          inputs:
+            os_users: { get_property: [ SELF, os_users] }
+
 
   tosca.nodes.ec3.Application:
     derived_from: tosca.nodes.SoftwareComponent
