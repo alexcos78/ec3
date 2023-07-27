@@ -426,6 +426,10 @@ node_types:
         type: list
         entry_schema:
           type: map
+#
+          entry_schema:
+            type: string
+#
         description: CLUES config options
         default:
         - { section: 'scheduling', option: 'IDLE_TIME', value: '1800' }
