@@ -1556,6 +1556,10 @@ node_types:
         type: list
         entry_schema:
           type: map
+#
+          entry_schema:
+            type: string
+#
         description: The YAML Ansible task list
         required: true
         default: []
