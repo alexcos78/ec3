@@ -1087,6 +1087,10 @@ node_types:
         type: list
         entry_schema:
           type: map
+#
+          entry_schema:
+            type: string
+#
         description: "List of spaces to be added to the provider (Each item with: id, name and size in Bytes)"
         required: true
       domain_onezone:
